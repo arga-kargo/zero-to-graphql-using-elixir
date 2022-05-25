@@ -29,14 +29,14 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Mutations.PersonTest do
       )
 
     assert json_response(response, 200) == %{
-      "data" => %{
-        "createPerson" => %{
-          "firstName" => person["firstName"],
-          "lastName" => person["lastName"],
-          "email" => person["email"],
-          "username" => person["username"]
-        }
-      }
-    }
+             "data" => %{
+               "createPerson" => %{
+                 "firstName" => person["firstName"],
+                 "lastName" => person["lastName"],
+                 "email" => person["email"],
+                 "username" => person["username"]
+               }
+             }
+           }
   end
 end

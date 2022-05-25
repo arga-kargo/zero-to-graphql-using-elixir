@@ -33,12 +33,12 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Queries.PersonTest do
       )
 
     assert json_response(response, 200) == %{
-      "data" => %{
-        "person" => %{
-          "email" => "conradwt@gmail.com"
-        }
-      }
-    }
+             "data" => %{
+               "person" => %{
+                 "email" => "conradwt@gmail.com"
+               }
+             }
+           }
   end
 
   test "get people by IDs" do
@@ -51,7 +51,7 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Queries.PersonTest do
       }
     """
 
-   people_ids =
+    people_ids =
       Person
       |> select([:id])
       |> order_by(asc: :id)
@@ -68,19 +68,19 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Queries.PersonTest do
       )
 
     assert json_response(response, 200) == %{
-      "data" => %{
-        "people" => [
-          %{
-            "firstName" => "Conrad",
-            "lastName" => "Taylor"
-          },
-          %{
-            "firstName" => "David",
-            "lastName" => "Heinemeier Hansson"
-          }
-        ]
-      }
-    }
+             "data" => %{
+               "people" => [
+                 %{
+                   "firstName" => "Conrad",
+                   "lastName" => "Taylor"
+                 },
+                 %{
+                   "firstName" => "David",
+                   "lastName" => "Heinemeier Hansson"
+                 }
+               ]
+             }
+           }
   end
 
   test "get people" do
@@ -101,26 +101,26 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Queries.PersonTest do
       )
 
     assert json_response(response, 200) == %{
-      "data" => %{
-        "people" => [
-          %{
-            "firstName" => "Conrad",
-            "lastName" => "Taylor"
-          },
-          %{
-            "firstName" => "David",
-            "lastName" => "Heinemeier Hansson"
-          },
-          %{
-            "firstName" => "Ezra",
-            "lastName" => "Zygmuntowicz"
-          },
-          %{
-            "firstName" => "Yukihiro",
-            "lastName" => "Matsumoto"
-          }
-        ]
-      }
-    }
+             "data" => %{
+               "people" => [
+                 %{
+                   "firstName" => "Conrad",
+                   "lastName" => "Taylor"
+                 },
+                 %{
+                   "firstName" => "David",
+                   "lastName" => "Heinemeier Hansson"
+                 },
+                 %{
+                   "firstName" => "Ezra",
+                   "lastName" => "Zygmuntowicz"
+                 },
+                 %{
+                   "firstName" => "Yukihiro",
+                   "lastName" => "Matsumoto"
+                 }
+               ]
+             }
+           }
   end
 end

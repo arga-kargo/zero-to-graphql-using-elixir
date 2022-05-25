@@ -2,11 +2,11 @@ defmodule ZeroPhoenixWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
-
+  
   Such tests rely on `Phoenix.ChannelTest` and also
   import other functionality to make it easier
   to build common datastructures and query the data layer.
-
+  
   Finally, if the test case interacts with the database,
   it cannot be async. For this reason, every test runs
   inside a transaction which is reset at the beginning
@@ -25,13 +25,13 @@ defmodule ZeroPhoenixWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(ZeroPhoenix.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(ZeroPhoenix.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

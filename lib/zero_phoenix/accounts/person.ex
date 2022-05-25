@@ -20,12 +20,8 @@ defmodule ZeroPhoenix.Accounts.Person do
 
   @doc false
   def changeset(%Person{} = person, attrs) do
-    IO.inspect attrs
-
     person
     |> cast(attrs, [:first_name, :last_name, :username, :email])
-    |> IO.inspect
     |> validate_required([:first_name, :last_name, :username, :email])
-    |> IO.inspect
   end
 end

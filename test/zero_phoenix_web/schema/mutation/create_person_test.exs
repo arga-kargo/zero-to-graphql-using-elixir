@@ -38,14 +38,14 @@ defmodule ZeroPhoenixWeb.Schema.Query.CreatePersonTest do
       )
 
     assert json_response(response, 200) == %{
-      "data" => %{
-        "createPerson" => %{
-          "firstName" => "Jane",
-          "lastName" => "Doe",
-          "email" => "jane@example.com",
-          "username" => "janed"
-        }
-      }
-    }
+             "data" => %{
+               "createPerson" => %{
+                 "firstName" => "Jane",
+                 "lastName" => "Doe",
+                 "email" => "jane@example.com",
+                 "username" => "janed"
+               }
+             }
+           }
   end
 end

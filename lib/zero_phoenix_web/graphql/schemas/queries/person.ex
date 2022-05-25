@@ -3,7 +3,7 @@ defmodule ZeroPhoenixWeb.GraphQL.Schemas.Queries.Person do
 
   object :person_queries do
     field :person, type: :person do
-      arg :id, non_null(:id)
+      arg(:id, non_null(:id))
 
       resolve(&ZeroPhoenixWeb.GraphQL.Resolvers.PersonResolver.find/3)
     end

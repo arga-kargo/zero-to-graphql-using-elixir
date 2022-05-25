@@ -35,15 +35,6 @@ defmodule ZeroPhoenix.AccountsTest do
       people_list = Accounts.list_people()
       person_list = [person]
 
-
-
-
-
-
-
-
-
-
       assert people_list === person_list
     end
 

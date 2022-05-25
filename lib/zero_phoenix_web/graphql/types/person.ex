@@ -22,7 +22,7 @@ defmodule ZeroPhoenixWeb.GraphQL.Types.Person do
 
     @desc "a list of friends for our person"
     field :friends, list_of(:person) do
-      resolve &Resolvers.PersonResolver.friends/3
+      resolve(&Resolvers.PersonResolver.friends/3)
     end
   end
 
