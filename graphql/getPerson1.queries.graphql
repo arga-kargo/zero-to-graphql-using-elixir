@@ -1,4 +1,4 @@
-query {
+query getPerson {
     person(id: 1) {
         email
         friends {
