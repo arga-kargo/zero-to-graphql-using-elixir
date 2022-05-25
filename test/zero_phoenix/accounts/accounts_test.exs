@@ -31,6 +31,7 @@ defmodule ZeroPhoenix.AccountsTest do
 
     test "list_people/0 returns all people" do
       person = person_fixture()
+      IO.inspect person
       assert Accounts.list_people() == [person]
     end
 
