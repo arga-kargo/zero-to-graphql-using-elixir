@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="deps.get" type="MixRunConfigurationType" factoryName="Elixir Mix">
+    <mix>
+      <argument>deps.get</argument>
+    </mix>
+    <module-filters inherit-application-module-filters="true" />
+    <method v="2" />
+  </configuration>
+</component>
