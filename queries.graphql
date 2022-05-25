@@ -1,0 +1,14 @@
+{
+  person(id: 1) {
+    firstName
+    lastName
+    username
+    email
+    friends {
+      firstName
+      lastName
+      username
+      email
+    }
+  }
+}
