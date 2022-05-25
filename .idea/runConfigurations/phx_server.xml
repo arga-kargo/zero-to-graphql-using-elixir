@@ -1,8 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="phx.server" type="MixRunConfigurationType" factoryName="Elixir Mix">
+    <module name="zero-to-graphql-using-elixir" />
     <mix>
       <argument>phx.server</argument>
     </mix>
+    <module name="zero-to-graphql-using-elixir" />
     <module-filters inherit-application-module-filters="true" />
     <method v="2" />
   </configuration>
