@@ -1,29 +1,43 @@
-"Represents a schema"
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
 schema {
-  query: RootQueryType
+    query: RootQueryType
+    mutation: RootMutationType
 }
 
 "a person"
 type Person {
-  "unique identifier for the person"
-  id: String!
+    "email of a person"
+    email: String!
+    "first name of a person"
+    firstName: String!
+    "a list of friends for our person"
+    friends: [Person]
+    "unique identifier for the person"
+    id: String!
+    "last name of a person"
+    lastName: String!
+    "username of a person"
+    username: String!
+}
 
-  "first name of a person"
-  firstName: String!
-
-  "last name of a person"
-  lastName: String!
-
-  "username of a person"
-  username: String!
-
-  "email of a person"
-  email: String!
-
-  "a list of friends for our person"
-  friends: [Person]
+type RootMutationType {
+    createPerson(input: PersonInput!): Person
 }
 
 type RootQueryType {
-  person(id: ID!): Person
+    people(ids: [ID] = []): [Person]
+    person(id: ID!): Person
+}
+
+"a person input"
+input PersonInput {
+    "email of a person"
+    email: String!
+    "first name of a person"
+    firstName: String!
+    "last name of a person"
+    lastName: String!
+    "username of a person"
+    username: String!
 }
