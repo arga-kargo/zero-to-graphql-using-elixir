@@ -1,8 +1,16 @@
-query getPerson {
-    person(id: 1) {
-        email
+query GetPersonById($id: ID!) {
+    person(id: $id) {
+        id
         friends {
+            id
+            username
+            firstName
+            lastName
             email
         }
+        username
+        firstName
+        lastName
+        email
     }
 }
