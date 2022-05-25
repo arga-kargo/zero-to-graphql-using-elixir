@@ -1,10 +1,5 @@
-mutation CreatePerson {
-    createPerson(input: {
-        lastName: "ahmad",
-        firstName: "arga",
-        username: "argaghulamahmad"
-        email: "argaghulamahmad@gmail.com",
-    }) {
+mutation CreatePerson($input: PersonInput!) {
+    createPerson(input: $input) {
         id
         username
     }
