@@ -1,0 +1,11 @@
+mutation CreatePerson {
+    createPerson(input: {
+        lastName: "ahmad",
+        firstName: "arga",
+        username: "argaghulamahmad"
+        email: "argaghulamahmad@gmail.com",
+    }) {
+        id
+        username
+    }
+}
