@@ -1,0 +1,8 @@
+query {
+    people {
+        email
+        friends {
+            email
+        }
+    }
+}
